@@ -8,24 +8,24 @@ namespace Epam.Task1
 {
     class Program
     {
-        static string NtoString(int n)
+        static void PrintSquare(int n)
         {
-            string result = null;
-
             for (int i = 0; i < n; i++)
             {
-                result += i + 1;
-                if (i != n - 1)
-                    result += ", ";
+                for (int j = 0; j < n; j++)
+                    if (i == j && i == n / 2)
+                        Console.Write(' ');
+                    else
+                        Console.Write('*');
+                Console.WriteLine();
             }
-            return result;
 
         }
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(NtoString(n));
+            PrintSquare(n);
             Console.ReadKey();
         }
     }
