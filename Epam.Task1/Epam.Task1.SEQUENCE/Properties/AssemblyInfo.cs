@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Epam.Task1")]
+[assembly: AssemblyTitle("Epam.Task1.SEQUENCE")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Epam.Task1")]
+[assembly: AssemblyProduct("Epam.Task1.SEQUENCE")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("0f569b94-6194-4045-b3af-22b064357ace")]
+[assembly: Guid("77c55b57-75fc-47db-a769-bf3062b98491")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

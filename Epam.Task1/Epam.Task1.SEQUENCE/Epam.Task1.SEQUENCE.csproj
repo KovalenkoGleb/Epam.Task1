@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F569B94-6194-4045-B3AF-22B064357ACE}</ProjectGuid>
+    <ProjectGuid>{77C55B57-75FC-47DB-A769-BF3062B98491}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Epam.Task1</RootNamespace>
-    <AssemblyName>Epam.Task1</AssemblyName>
+    <RootNamespace>Epam.Task1.SEQUENCE</RootNamespace>
+    <AssemblyName>Epam.Task1.SEQUENCE</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
