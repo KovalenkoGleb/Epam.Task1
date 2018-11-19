@@ -8,7 +8,7 @@ namespace Epam.Task1
 {
     class Program
     {
-        static void PrintSquare(int n)
+        public static void PrintSquare(int n)
         {
             for (int i = 0; i < n; i++)
             {
@@ -19,29 +19,33 @@ namespace Epam.Task1
                         Console.Write('*');
                 Console.WriteLine();
             }
-
         }
 
-
-        static void Main(string[] args)
-        {     
+        public static int ReadNumber()
+        {
+            int n;
             Console.WriteLine("Enter a positive odd integer number: ");
             try
             {
-                int n = int.Parse(Console.ReadLine());
-                while (n < 1 || n%2 == 0 || n % 1 != 0)
+                n = int.Parse(Console.ReadLine());
+                while (n < 1 || n % 2 == 0 || n % 1 != 0)
                 {
                     Console.WriteLine("The number should be positive, odd and integer. Enter a new one: ");
                     n = int.Parse(Console.ReadLine());
                 }
-                PrintSquare(n);
             }
             catch
             {
-                Console.WriteLine("Error. You should enter a positive, odd and integer number.");
-
+                Console.WriteLine("Error. You should enter a positive, odd and integer number. Enter a new one: ");
+                n = ReadNumber();
             }
+            return n;
+        }
 
+
+        public static void Main(string[] args)
+        {
+            PrintSquare(ReadNumber());
         }
     }
 }

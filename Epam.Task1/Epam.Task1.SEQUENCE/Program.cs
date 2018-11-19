@@ -8,7 +8,7 @@ namespace Epam.Task1
 {
     class Program
     {
-        static void ArrayOfnNumbers(int n)
+        public static void ArrayOfnNumbers(int n)
         {
             for (int i = 1; i < n + 1; i++)
             {
@@ -19,24 +19,31 @@ namespace Epam.Task1
             Console.WriteLine();// Если не написать, то при дебаге "Нажмите на любую клавишу выводится в ту же строку, что некрасиво
         }
 
-
-        static void Main(string[] args)
+        public static int ReadNumber()
         {
+            int n;
             Console.WriteLine("Enter a positive integer number: ");
             try
             {
-                int n = int.Parse(Console.ReadLine());
+                n = int.Parse(Console.ReadLine());
                 while (n < 1 || n % 1 != 0)
                 {
                     Console.WriteLine("The number should be positive and integer. Enter a new one: ");
                     n = int.Parse(Console.ReadLine());
                 }
-                ArrayOfnNumbers(n);
             }
-            catch 
+            catch
             {
-                Console.WriteLine("Error. You should enter a positive and integer number.");                
+                Console.WriteLine("Error. You should enter a positive and integer number. Enter a new one: ");
+                n = ReadNumber();
             }
+            return n;
+        }
+
+
+        public static void Main(string[] args)
+        {
+            ArrayOfnNumbers(ReadNumber());
         }
     }
 }
