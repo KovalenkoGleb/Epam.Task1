@@ -21,6 +21,8 @@ namespace Epam.Task1
             }
 
         }
+
+
         static void Main(string[] args)
         {     
             Console.WriteLine("Enter a positive odd integer number: ");

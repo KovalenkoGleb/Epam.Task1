@@ -35,8 +35,7 @@ namespace Epam.Task1
             }
             catch 
             {
-                Console.WriteLine("Error. You should enter a positive and integer number.");
-                
+                Console.WriteLine("Error. You should enter a positive and integer number.");                
             }
         }
     }
