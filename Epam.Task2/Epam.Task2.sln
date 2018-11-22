@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.Rectangle", "Epam.Task2\Epam.Task2.Rectangle.csproj", "{8D277BCF-8A4C-4C56-A510-C5662B676D70}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.Triangle", "Epam.Task2.Triangle\Epam.Task2.Triangle.csproj", "{69225008-95EB-4BC6-9670-1058E8A4A49B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.Another_Triangle", "Epam.Task2.Another_Triangle\Epam.Task2.Another_Triangle.csproj", "{DF803A45-47E0-449C-8988-DEC147CE03F2}"
@@ -21,16 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.NoPositive", "Ep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.NonNegativeSum", "Epam.Task2.NonNegativeSum\Epam.Task2.NonNegativeSum.csproj", "{50914462-E726-43AE-BDB3-565EDC5A4762}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.Rectangle", "Epam.Task2.Rectangle\Epam.Task2.Rectangle.csproj", "{69A1B45E-3822-45F4-B52A-86FDE9F3F818}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D277BCF-8A4C-4C56-A510-C5662B676D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D277BCF-8A4C-4C56-A510-C5662B676D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D277BCF-8A4C-4C56-A510-C5662B676D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D277BCF-8A4C-4C56-A510-C5662B676D70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69225008-95EB-4BC6-9670-1058E8A4A49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69225008-95EB-4BC6-9670-1058E8A4A49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69225008-95EB-4BC6-9670-1058E8A4A49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{50914462-E726-43AE-BDB3-565EDC5A4762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50914462-E726-43AE-BDB3-565EDC5A4762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50914462-E726-43AE-BDB3-565EDC5A4762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
