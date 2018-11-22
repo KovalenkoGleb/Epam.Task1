@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epam.Task2
+namespace Epam.Task2.Triangle
 {
     class Program
     {
         public static int ReadNumber()
         {
-            int n;            
+            int n;           
             try
             {
                 n = int.Parse(Console.ReadLine());
@@ -30,13 +30,16 @@ namespace Epam.Task2
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter a: ");
-            int a = ReadNumber();
-
-            Console.WriteLine("Enter b: ");
-            int b = ReadNumber();
-            Console.WriteLine($"The rectangle area is {a * b}");
-
+            Console.WriteLine("Enter n: ");
+            int n = ReadNumber();
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
