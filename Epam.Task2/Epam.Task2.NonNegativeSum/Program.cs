@@ -8,7 +8,7 @@ namespace Epam.Task2.NonNegativeSum
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Random RandomGenerator = new Random();
             int[] array = new int[5];

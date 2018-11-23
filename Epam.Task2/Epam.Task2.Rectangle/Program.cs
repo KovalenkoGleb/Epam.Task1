@@ -8,7 +8,7 @@ namespace Epam.Task2
 {
     class Program
     {
-        public static int ReadNumber()
+        public public static int ReadNumber()
         {
             int n;
             try

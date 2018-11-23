@@ -8,7 +8,7 @@ namespace Epam.Task2.CharDoubler
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Ведите первую строку: ");
             string str1 = Console.ReadLine();

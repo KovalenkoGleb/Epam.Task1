@@ -8,7 +8,7 @@ namespace Epam.Task2._2DArray
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int[,] array = new int[3, 3];
             Random RandomGenerator = new Random();
