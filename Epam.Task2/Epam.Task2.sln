@@ -21,6 +21,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.NonNegativeSum",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.Rectangle", "Epam.Task2.Rectangle\Epam.Task2.Rectangle.csproj", "{69A1B45E-3822-45F4-B52A-86FDE9F3F818}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.2DArray", "Epam.Task2.2DArray\Epam.Task2.2DArray.csproj", "{329015D7-FD71-49BB-A747-CC21C76AE1B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.AverageStringLength", "Epam.Task2.AverageStringLength\Epam.Task2.AverageStringLength.csproj", "{2091B7C8-6679-4435-9986-6640C0BD3E84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task2.CharDoubler", "Epam.Task2.CharDoubler\Epam.Task2.CharDoubler.csproj", "{906E5968-F447-4530-ADC3-CA7CD6AC299A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +69,18 @@ Global
 		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A1B45E-3822-45F4-B52A-86FDE9F3F818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{329015D7-FD71-49BB-A747-CC21C76AE1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329015D7-FD71-49BB-A747-CC21C76AE1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329015D7-FD71-49BB-A747-CC21C76AE1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329015D7-FD71-49BB-A747-CC21C76AE1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2091B7C8-6679-4435-9986-6640C0BD3E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2091B7C8-6679-4435-9986-6640C0BD3E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2091B7C8-6679-4435-9986-6640C0BD3E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2091B7C8-6679-4435-9986-6640C0BD3E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906E5968-F447-4530-ADC3-CA7CD6AC299A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906E5968-F447-4530-ADC3-CA7CD6AC299A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906E5968-F447-4530-ADC3-CA7CD6AC299A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906E5968-F447-4530-ADC3-CA7CD6AC299A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
