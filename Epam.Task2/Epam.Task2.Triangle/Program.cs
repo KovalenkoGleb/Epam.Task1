@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2.Triangle
 {
-    class Program
+    public class Program
     {
         public static int ReadNumber()
         {
@@ -25,6 +25,7 @@ namespace Epam.Task2.Triangle
                 Console.WriteLine("Error. You should enter a positive and integer number. Enter a new one: ");
                 n = ReadNumber();
             }
+
             return n;
         }
 
@@ -38,6 +39,7 @@ namespace Epam.Task2.Triangle
                 {
                     Console.Write('*');
                 }
+
                 Console.WriteLine();
             }
         }

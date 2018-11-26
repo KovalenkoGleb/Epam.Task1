@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2.X_Mas_Tree
 {
-    class Program
+    public class Program
     {
         public static int ReadNumber()
         {
@@ -25,10 +25,11 @@ namespace Epam.Task2.X_Mas_Tree
                 Console.WriteLine("Error. You should enter a positive and integer number. Enter a new one: ");
                 n = ReadNumber();
             }
+
             return n;
         }
 
-        public static void PrintTriangle(int n,int n1)
+        public static void PrintTriangle(int n, int n1)
         {
             int star_number = 1;
             int space_number = (n1 - 1) * 2;
@@ -48,10 +49,10 @@ namespace Epam.Task2.X_Mas_Tree
                 {
                     Console.Write(' ');
                 }
+
                 Console.WriteLine();
                 space_number -= 2;
                 star_number += 2;
-
             }
         }
 
@@ -61,7 +62,7 @@ namespace Epam.Task2.X_Mas_Tree
             int n = ReadNumber();
             for (int i = 1; i <= n; i++)
             {
-                PrintTriangle(i,n);
+                PrintTriangle(i, n);
             }
         }
     }

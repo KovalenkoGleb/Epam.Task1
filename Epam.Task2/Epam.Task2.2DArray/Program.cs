@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2._2DArray
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
             int[,] array = new int[3, 3];
-            Random RandomGenerator = new Random();
+            Random randomGenerator = new Random();
 
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    array[i, j] = RandomGenerator.Next(10);
+                    array[i, j] = randomGenerator.Next(10);
                     Console.Write($"{array[i, j]} ");
                 }
+
                 Console.WriteLine();
             }
 
@@ -29,9 +30,12 @@ namespace Epam.Task2._2DArray
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
                     if ((i + j) % 2 == 0)
+                    {
                         sum += array[i, j];
+                    }
                 }
             }
+
             Console.WriteLine($"Sum = {sum}");
         }
     }

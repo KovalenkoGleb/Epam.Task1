@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2
 {
-    class Program
+    public class Program
     {
-        public public static int ReadNumber()
+        public static int ReadNumber()
         {
             int n;
             try
@@ -25,6 +25,7 @@ namespace Epam.Task2
                 Console.WriteLine("Error. You should enter a positive and integer number. Enter a new one: ");
                 n = ReadNumber();
             }
+
             return n;
         }
 
@@ -36,7 +37,6 @@ namespace Epam.Task2
             Console.WriteLine("Enter b: ");
             int b = ReadNumber();
             Console.WriteLine($"The rectangle area is {a * b}");
-
         }
     }
 }

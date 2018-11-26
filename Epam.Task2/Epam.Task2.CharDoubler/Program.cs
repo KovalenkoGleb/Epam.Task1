@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2.CharDoubler
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -21,8 +21,11 @@ namespace Epam.Task2.CharDoubler
             {
                 sbuilder.Append(str1[i]);
                 if (str2.Contains(str1[i]))
+                {
                     sbuilder.Append(str1[i]);
+                }
             }
+
             Console.WriteLine(sbuilder.ToString());
         }
     }

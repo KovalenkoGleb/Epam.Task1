@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Epam.Task2.AverageStringLength
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -17,10 +16,11 @@ namespace Epam.Task2.AverageStringLength
             {
                 for (int i = 0; i < str.Length; i++)
                 {
-                    if (Char.IsLetter(str[i]) || char.IsNumber(str[i]))
+                    if (char.IsLetter(str[i]) || char.IsNumber(str[i]))
                     {
                         temp_count++;
                     }
+
                     if (char.IsPunctuation(str[i]) || char.IsSeparator(str[i]) || i == str.Length - 1)
                     {
                         averageLength += temp_count;
@@ -28,10 +28,13 @@ namespace Epam.Task2.AverageStringLength
                         temp_count = 0;
                     }
                 }
+
                 Console.WriteLine(averageLength / count);
             }
             else
+            {
                 Console.WriteLine(0);
+            }
         }
     }
 }

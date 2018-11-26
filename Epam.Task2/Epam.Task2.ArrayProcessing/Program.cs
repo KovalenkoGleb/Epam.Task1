@@ -6,33 +6,38 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2.ArrayProcessing
 {
-    class Program
+    public class Program
     {
         public static void ArraySort(ref int[] array)
         {
             int n = array.Length;
             for (int i = n - 1; i > 0; i--)
+            {
                 for (int j = 0; j < i; j++)
+                {
                     if (array[j] > array[j + 1])
                     {
                         int tmp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = tmp;
                     }
+                }
+            }
         }
 
         public static void Main(string[] args)
         {
-            Random RandomGenerator = new Random();
-            int RandomNumber = RandomGenerator.Next(50);
+            Random randomGenerator = new Random();
+            int randomNumber = randomGenerator.Next(50);
             int[] array = new int[5];
 
             Console.Write("Original array: ");
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = RandomGenerator.Next(50);
+                array[i] = randomGenerator.Next(50);
                 Console.Write($"{array[i]} ");
             }
+
             Console.WriteLine();
 
             Console.Write("Sorted array: ");

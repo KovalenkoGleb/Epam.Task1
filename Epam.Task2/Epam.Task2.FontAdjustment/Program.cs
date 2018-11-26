@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Epam.Task2.FontAdjustment
 {
-    class Program
-    {
+    public class Program
+    {        
+        [Flags]
+        public enum FontAdjustment : byte
+        {
+            none = 0,
+            bold = 1,
+            italic = 2,
+            underline = 4,
+        }
+
         public static int ReadNumber()
         {
             int n;
@@ -25,16 +34,8 @@ namespace Epam.Task2.FontAdjustment
                 Console.WriteLine("Ошибка. Вы должны ввести число от 1 до 3, попробуйте ещё раз: ");
                 n = ReadNumber();
             }
-            return n;
-        }
 
-        [Flags]
-        public enum FontAdjustment : byte
-        {
-            none = 0,
-            bold = 1,
-            italic = 2,
-            underline = 4,
+            return n;
         }
 
         public static void Main(string[] args)
