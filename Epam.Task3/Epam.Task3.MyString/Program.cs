@@ -14,7 +14,7 @@ namespace Epam.Task3.MyString
             Console.Write($"Welcom to MyString Test Application{Environment.NewLine}Enter string line: ");
             stringstr1 = Console.ReadLine();
             MyString mystr1 = new MyString(stringstr1);
-            Console.WriteLine($"MyString from string line is: {mystr1}{Environment.NewLine}MyString to char is:{mystr1.ToChar()}{Environment.NewLine}It's length is {mystr1.Length}{Environment.NewLine}");
+            Console.WriteLine($"MyString from string line is: {mystr1}{Environment.NewLine}It's length is {mystr1.Length}{Environment.NewLine}");
 
             Console.Write("Enter another two MyString lines to compare them. First one: ");
             mystr1 = new MyString(Console.ReadLine());
