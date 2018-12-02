@@ -16,7 +16,7 @@ namespace Epam.Task1
                 if (i != n)
                     Console.Write(", ");
             }
-            Console.WriteLine();// Если не написать, то при дебаге "Нажмите на любую клавишу выводится в ту же строку, что некрасиво
+            Console.WriteLine();
         }
 
         public static int ReadNumber()

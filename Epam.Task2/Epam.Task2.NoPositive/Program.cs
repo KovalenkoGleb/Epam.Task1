@@ -19,7 +19,7 @@ namespace Epam.Task2.NoPositive
                 {
                     for (int k = 0; k < bigArray.GetLength(2); k++)
                     {
-                        bigArray[i, j, k] = 1;
+                        bigArray[i, j, k] = randomGenerator.Next(-10, 10);
                     }
                 }
             }
@@ -32,10 +32,26 @@ namespace Epam.Task2.NoPositive
                     {
                         if (bigArray[i, j, k] > 0)
                         {
-                            bigArray[i, j, k] = 0;
+                            bigArray[i, j, k] = 0;                            
                         }
                     }
                 }
+            }
+
+            for (int i = 0; i < bigArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < bigArray.GetLength(1); j++)
+                {
+                    for (int k = 0; k < bigArray.GetLength(2); k++)
+                    {
+                        Console.Write($"{bigArray[i, j, k]} ");                        
+                    }
+
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+                Console.WriteLine();
             }
         }
     }

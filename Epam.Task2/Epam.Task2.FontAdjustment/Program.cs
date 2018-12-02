@@ -25,13 +25,13 @@ namespace Epam.Task2.FontAdjustment
                 n = int.Parse(Console.ReadLine());
                 while (n < 1 || n > 3)
                 {
-                    Console.WriteLine("Вы должны ввести число от 1 до 3, попробуйте ещё раз: ");
+                    Console.WriteLine("You should enter a number from 1 to 3, try again: ");
                     n = int.Parse(Console.ReadLine());
                 }
             }
             catch
             {
-                Console.WriteLine("Ошибка. Вы должны ввести число от 1 до 3, попробуйте ещё раз: ");
+                Console.WriteLine("You should enter a number from 1 to 3, try again: ");
                 n = ReadNumber();
             }
 
@@ -44,7 +44,7 @@ namespace Epam.Task2.FontAdjustment
             int flag = 0;
             while (true)
             {
-                Console.WriteLine($"Парамеипы надписи: {f} {Environment.NewLine} Введите: {Environment.NewLine} " +
+                Console.WriteLine($"Inscription parameters: {f} {Environment.NewLine} Enter: {Environment.NewLine} " +
                     $"1: bold {Environment.NewLine} 2: italic {Environment.NewLine} 3: underline");
                 flag = ReadNumber();
 

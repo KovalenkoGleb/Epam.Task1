@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.Ring", "Epam.Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.Usеr", "Epam.Task3.Usеr\Epam.Task3.Usеr.csproj", "{78190F45-D021-4877-95C8-94ABE73F4CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.MyString", "Epam.Task3.MyString\Epam.Task3.MyString.csproj", "{2A4262E3-540C-4DF6-ADC9-975CC9AB0922}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{78190F45-D021-4877-95C8-94ABE73F4CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78190F45-D021-4877-95C8-94ABE73F4CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78190F45-D021-4877-95C8-94ABE73F4CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4262E3-540C-4DF6-ADC9-975CC9AB0922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4262E3-540C-4DF6-ADC9-975CC9AB0922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4262E3-540C-4DF6-ADC9-975CC9AB0922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4262E3-540C-4DF6-ADC9-975CC9AB0922}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
