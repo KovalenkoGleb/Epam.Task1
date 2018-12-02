@@ -138,7 +138,7 @@ namespace Epam.Task3.MyString
                 return false;
             }
 
-            for (int i = 0; i < this.Length - 1; i++)
+            for (int i = 0; i < value.Length - 1; i++)
             {
                 if (this.chars[i] != value[i])
                 {
