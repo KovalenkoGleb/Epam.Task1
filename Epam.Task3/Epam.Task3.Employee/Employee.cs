@@ -12,7 +12,7 @@ namespace Epam.Task3.Employee
 
         public Employee(string name, string sname, DateTime bdate, DateTime edate) : base(name, sname, bdate)
         {
-            if (bdate.Year > 1900 && edate.Year > 1900)
+            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now)
             {
                 this.emplDate = edate;
             }
@@ -24,7 +24,7 @@ namespace Epam.Task3.Employee
 
         public Employee(string name, string sname, string patro, DateTime bdate, DateTime edate) : base(name, sname, patro, bdate)
         {
-            if (bdate.Year > 1900 && edate.Year > 1900)
+            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now)
             {
                 this.emplDate = edate;
             }
