@@ -12,10 +12,10 @@ namespace Epam.Task3.User
         private string sname;
         private string pname;
         private DateTime bdate;
-
+                
         public User(string name, string sname, DateTime bdate)
         {
-            if (bdate.Year > 1900)
+            if (bdate.Year > 1900 && bdate < DateTime.Now && this.TestName(name) && this.TestName(sname))
             {
                 this.fname = name;
                 this.sname = sname;
@@ -30,7 +30,7 @@ namespace Epam.Task3.User
 
         public User(string name, string sname, string patro, DateTime bdate)
         {
-            if (bdate.Year > 1900)
+            if (bdate.Year > 1900 && bdate < DateTime.Now && this.TestName(name) && this.TestName(sname) && this.TestName(patro))
             {
                 this.fname = name;
                 this.sname = sname;
@@ -106,6 +106,30 @@ namespace Epam.Task3.User
             {
                 return DateTime.Now.Year - this.bdate.Year;
             }
+        }
+
+        private bool TestName(string name)
+        {
+            if (name.Length < 1)
+            {
+                return false;
+            }
+
+            int separatorTest = 0;
+            for (int i = 0; i < name.Length; i++)
+            {
+                if (char.IsSeparator(name[i]))
+                {
+                    separatorTest++;
+                }
+            }
+
+            if (separatorTest == name.Length)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
