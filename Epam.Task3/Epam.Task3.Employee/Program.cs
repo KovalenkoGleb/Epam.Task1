@@ -12,7 +12,7 @@ namespace Epam.Task3.Employee
         {
             try
             {
-                string fname, sname, pname = null;
+                string fname, sname, post, pname = null;
                 DateTime bdate, edate;
                 Console.WriteLine("Enter First Name: ");
                 fname = Console.ReadLine();
@@ -24,6 +24,8 @@ namespace Epam.Task3.Employee
                 bdate = DateTime.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Employement Date: ");
                 edate = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Post: ");
+                post = Console.ReadLine();
 
                 Employee employee = new Employee(fname, sname, pname, bdate, edate);
 

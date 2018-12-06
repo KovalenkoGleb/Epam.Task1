@@ -10,9 +10,11 @@ namespace Epam.Task3.Employee
     {
         private DateTime emplDate;
 
-        public Employee(string name, string sname, DateTime bdate, DateTime edate) : base(name, sname, bdate)
+        private string post;
+
+        public Employee(string name, string sname, string post, DateTime bdate, DateTime edate) : base(name, sname, bdate)
         {
-            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now)
+            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now && this.TestName(post))
             {
                 this.emplDate = edate;
             }
@@ -22,9 +24,9 @@ namespace Epam.Task3.Employee
             }
         }
 
-        public Employee(string name, string sname, string patro, DateTime bdate, DateTime edate) : base(name, sname, patro, bdate)
+        public Employee(string name, string sname, string patro, string post, DateTime bdate, DateTime edate) : base(name, sname, patro, bdate)
         {
-            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now)
+            if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now && this.TestName(post))
             {
                 this.emplDate = edate;
             }
@@ -49,6 +51,26 @@ namespace Epam.Task3.Employee
                 }
 
                 this.emplDate = value;
+            }
+        }
+
+        public string Post
+        {
+            get
+            {
+                return this.post;
+            }
+
+            set
+            {
+                if (this.TestName(this.post))
+                {
+                    this.post = value;
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
         }
 

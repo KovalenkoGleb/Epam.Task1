@@ -112,7 +112,7 @@ namespace Epam.Task3.Employee
             }
         }
 
-        private bool TestName(string name)
+        protected bool TestName(string name)
         {
             if (name.Length < 1)
             {
