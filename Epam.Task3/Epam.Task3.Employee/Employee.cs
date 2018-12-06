@@ -17,6 +17,7 @@ namespace Epam.Task3.Employee
             if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now && this.TestName(post))
             {
                 this.emplDate = edate;
+                this.post = post;
             }
             else
             {
@@ -29,6 +30,7 @@ namespace Epam.Task3.Employee
             if (bdate.Year > 1900 && edate.Year > 1900 && edate < DateTime.Now && this.TestName(post))
             {
                 this.emplDate = edate;
+                this.post = post;
             }
             else
             {
