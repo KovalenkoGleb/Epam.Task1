@@ -50,7 +50,6 @@ namespace Epam.Task4.WordFrequency
             string s = sr.ReadToEnd();
             WordFounder(s, ref wordFreq);
 
-
             foreach (var item in wordFreq)
             {
                 Console.WriteLine($"{item.Key} {item.Value}");
