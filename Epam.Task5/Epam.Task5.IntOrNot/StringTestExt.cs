@@ -17,6 +17,7 @@ namespace Epam.Task5.IntOrNot
                     return false;
                 }
             }
+
             return true;
         }
     }

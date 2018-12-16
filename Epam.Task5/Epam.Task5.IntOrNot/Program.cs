@@ -13,7 +13,7 @@ namespace Epam.Task5.IntOrNot
             Console.WriteLine("Enter string, that you want to test: ");
             string str = Console.ReadLine();
 
-            if(str.IsInteger())
+            if (str.IsInteger())
             {
                 Console.WriteLine("It is integer");
             }
