@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace Epam.Task5.IntOrNot
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Console.WriteLine("Enter string, that you want to test: ");
+            string str = Console.ReadLine();
+
+            if(str.IsInteger())
+            {
+                Console.WriteLine("It is integer");
+            }
+            else
+            {
+                Console.WriteLine("It is not integer");
+            }
         }
     }
 }

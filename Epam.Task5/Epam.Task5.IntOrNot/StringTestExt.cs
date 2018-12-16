@@ -10,18 +10,14 @@ namespace Epam.Task5.IntOrNot
     {
         public static bool IsInteger(this string str)
         {
-            if (str.Contains('-'))
-            {
-                return false;
-            }
-
             for (int i = 0; i < str.Length; i++)
             {
-                if(char.IsSeparator(str[i]) || char.IsLetter(str[i]))
+                if (!char.IsNumber(str[i]))
                 {
                     return false;
                 }
             }
+            return true;
         }
     }
 }

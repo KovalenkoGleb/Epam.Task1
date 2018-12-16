@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{203EA88C-2416-4074-B806-A505AC677254}</ProjectGuid>
+    <ProjectGuid>{147C8FDC-E53B-4B11-A22D-6C66AF4F0C1E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Epam.Task5.IntOrNot</RootNamespace>
-    <AssemblyName>Epam.Task5.IntOrNot</AssemblyName>
+    <RootNamespace>Epam.Task5.ISeekYou</RootNamespace>
+    <AssemblyName>Epam.Task5.ISeekYou</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringTestExt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
