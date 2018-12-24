@@ -174,7 +174,7 @@ namespace Epam.Task6.BackupSystem
         {
             try
             {
-                Console.WriteLine($"Welcon to Backup System!{Environment.NewLine} If you want to start Backup mode - press B" +
+                Console.WriteLine($"Welcome to Backup System!{Environment.NewLine} If you want to start Backup mode - press B" +
                     $"{Environment.NewLine} If you want to start Watching mode - press W{Environment.NewLine} If you want to delete backup files" +
                     $"and previous path - press N");
 
