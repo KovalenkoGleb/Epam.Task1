@@ -45,13 +45,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.Task7.DAL\Epam.Task7.DAL.csproj">
-      <Project>{17EFB0A8-371B-4ED3-B517-F71489C1108F}</Project>
-      <Name>Epam.Task7.DAL</Name>
+    <ProjectReference Include="..\Epam.Task7.DAL.Interface\Epam.Task7.DAL.Interface.csproj">
+      <Project>{0A910E72-E8DB-419B-9E71-D1293771BFDF}</Project>
+      <Name>Epam.Task7.DAL.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Epam.Task7.Entities\Epam.Task7.Entities.csproj">
       <Project>{A42B5FE7-B25D-474F-9604-D803C1486EC6}</Project>
       <Name>Epam.Task7.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.Task7.Users.BLL.Interface\Epam.Task7.Users.BLL.Interface.csproj">
+      <Project>{E73FE3BB-3FEC-455D-9E4A-18940A5D664E}</Project>
+      <Name>Epam.Task7.Users.BLL.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
