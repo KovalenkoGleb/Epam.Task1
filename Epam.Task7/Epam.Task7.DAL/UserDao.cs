@@ -16,7 +16,7 @@ namespace Epam.Task7.DAL
         private static Dictionary<int, User> ReadStorage()
         {
             Dictionary<int, User> tempRepo = new Dictionary<int, User>();
-            using (StreamReader sr = new StreamReader("Storage.txt"))
+            using (StreamReader sr = new StreamReader("UserStorage.txt"))
             {
                 while (!sr.EndOfStream)
                 {
@@ -39,7 +39,7 @@ namespace Epam.Task7.DAL
 
         public void SaveStorage()
         {
-            using (StreamWriter sw = new StreamWriter("Storage.txt"))
+            using (StreamWriter sw = new StreamWriter("UserStorage.txt"))
             {
                 foreach (var user in repoUsers)
                 {
