@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>0a910e72-e8db-419b-9e71-d1293771bfdf</ProjectGuid>
+    <ProjectGuid>{0A910E72-E8DB-419B-9E71-D1293771BFDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Epam.Task7.DAL.Interfaces</RootNamespace>
@@ -32,21 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    
-    
     <Reference Include="Microsoft.CSharp" />
-    
     <Reference Include="System.Data" />
-    
     <Reference Include="System.Net.Http" />
-    
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAwardDao.cs" />
     <Compile Include="IUserDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,4 +52,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

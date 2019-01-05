@@ -45,6 +45,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Epam.Task7.Awards.BLL.Interface\Epam.Task7.Awards.BLL.Interface.csproj">
+      <Project>{DA33F1F1-7AE3-415B-8B28-5450569705BE}</Project>
+      <Name>Epam.Task7.Awards.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.Task7.Awards.BLL\Epam.Task7.Awards.BLL.csproj">
+      <Project>{7B3AAE5C-726A-4B18-B4D4-416DD094A688}</Project>
+      <Name>Epam.Task7.Awards.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Epam.Task7.DAL.Interface\Epam.Task7.DAL.Interface.csproj">
       <Project>{0A910E72-E8DB-419B-9E71-D1293771BFDF}</Project>
       <Name>Epam.Task7.DAL.Interface</Name>

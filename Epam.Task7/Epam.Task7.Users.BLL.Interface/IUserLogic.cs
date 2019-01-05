@@ -1,9 +1,9 @@
-﻿using Epam.Task7.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Epam.Task7.Entities;
 
 namespace Epam.Task7.Users.BLL.Interface
 {
@@ -15,7 +15,6 @@ namespace Epam.Task7.Users.BLL.Interface
 
         User GetById(int id);
 
-        IEnumerable<User> GetAll();
-       
+        IEnumerable<User> GetAll();       
     }
 }

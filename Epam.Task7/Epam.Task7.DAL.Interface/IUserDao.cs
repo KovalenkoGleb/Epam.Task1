@@ -13,6 +13,6 @@ namespace Epam.Task7.DAL.Interface
         
         IEnumerable<User> GetAll();
 
-        void SaveStorage();
+        void SaveUserStorage();
     }
 }

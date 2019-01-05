@@ -18,16 +18,13 @@ namespace Epam.Task7.Entities
         {
             get
             {
-                return (DateTime.Now.Year - DateOfBirth.Year);
+                return DateTime.Now.Year - this.DateOfBirth.Year;
             }
-        } // проверить правильность
-              
+        }
 
         public override string ToString()
         {
             return $"{Id} {Name} {Age}";
         }
-
-        
     }
 }

@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A42B5FE7-B25D-474F-9604-D803C1486EC6}</ProjectGuid>
+    <ProjectGuid>{7B3AAE5C-726A-4B18-B4D4-416DD094A688}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Epam.Task7.Entities</RootNamespace>
-    <AssemblyName>Epam.Task7.Entities</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epam.Task7.Awards.BLL</RootNamespace>
+    <AssemblyName>Epam.Task7.Awards.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +23,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Award.cs" />
+    <Compile Include="AwardLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.Task7.Awards.BLL.Interface\Epam.Task7.Awards.BLL.Interface.csproj">
+      <Project>{DA33F1F1-7AE3-415B-8B28-5450569705BE}</Project>
+      <Name>Epam.Task7.Awards.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.Task7.DAL.Interface\Epam.Task7.DAL.Interface.csproj">
+      <Project>{0A910E72-E8DB-419B-9E71-D1293771BFDF}</Project>
+      <Name>Epam.Task7.DAL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.Task7.DAL\Epam.Task7.DAL.csproj">
+      <Project>{17EFB0A8-371B-4ED3-B517-F71489C1108F}</Project>
+      <Name>Epam.Task7.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.Task7.Entities\Epam.Task7.Entities.csproj">
+      <Project>{A42B5FE7-B25D-474F-9604-D803C1486EC6}</Project>
+      <Name>Epam.Task7.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
