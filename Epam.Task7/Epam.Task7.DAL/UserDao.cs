@@ -16,6 +16,10 @@ namespace Epam.Task7.DAL
         private static Dictionary<int, User> ReadStorage()
         {
             Dictionary<int, User> tempRepo = new Dictionary<int, User>();
+            if(!File.Exists("UserStorage.txt"))
+            {
+                return tempRepo;
+            }
             using (StreamReader sr = new StreamReader("UserStorage.txt"))
             {
                 while (!sr.EndOfStream)
