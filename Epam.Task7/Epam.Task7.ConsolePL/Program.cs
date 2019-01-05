@@ -21,6 +21,21 @@ namespace Epam.Task7.ConsolePL
             }
         }
 
+        private static void ShowUserById(IUserLogic userLogic)
+        {
+            Console.Write("Enter user ID: ");
+            try
+            {
+                int id = int.Parse(Console.ReadLine());
+                Console.WriteLine(userLogic.GetById(id));
+            }
+            catch
+            {
+                Console.WriteLine($"ERROR. Wrong ID!{Environment.NewLine}");
+            }
+           
+        }
+
         private static void AddUser(IUserLogic userLogic)
         {
             var user = new User
@@ -29,7 +44,40 @@ namespace Epam.Task7.ConsolePL
                 DateOfBirth = DateTime.Parse("29.08.1995"),
             };
 
-            userLogic.Add(user);
+            Console.Write("Enter user name: ");
+            user.Name = Console.ReadLine();
+            Console.Write("Enter user BirthDay(DD/MM/YYYY)): ");
+            try
+            {
+                user.DateOfBirth = DateTime.Parse(Console.ReadLine());
+                userLogic.Add(user);
+            }
+            catch
+            {
+                Console.WriteLine($"ERROR. Wrong Date! User was not added.{Environment.NewLine}");
+            }
+        }
+
+        private static void DeleteUser(IUserLogic userLogic)
+        {
+            Console.Write("Enter user ID: ");
+            try
+            {
+                int id = int.Parse(Console.ReadLine());
+                userLogic.Delete(id);
+            }
+            catch
+            {
+                Console.WriteLine($"ERROR. Wrong ID! User was not added.{Environment.NewLine}");
+            }
+
+
+        }
+
+        private static char ReadKey(ref char inp_key)
+        {
+            inp_key = Console.ReadLine()[0];
+            return inp_key = char.ToUpper(inp_key);
         }
 
         static void Main(string[] args)
@@ -37,15 +85,53 @@ namespace Epam.Task7.ConsolePL
 
             var userLogic = DependencyResolver.UserLogic;
 
-            AddUser(userLogic);
-            ShowUsers(userLogic);
-            AddUser(userLogic);
-            AddUser(userLogic);
-            AddUser(userLogic);
-            ShowUsers(userLogic);
-            userLogic.Delete(1);
-            ShowUsers(userLogic);
+            Console.WriteLine($"Welcome to my Three-Layer Architecture programm 'Users'{Environment.NewLine}{Environment.NewLine}If you want to add user - enter A," +
+                $"{Environment.NewLine}If you want to delete user - enter D,{Environment.NewLine}If you want to show all users - enter G,{Environment.NewLine}" +
+                $"If you want to get user by ID - enter I{Environment.NewLine}To stop programm - enter S{Environment.NewLine}{Environment.NewLine}");
 
+            char inp_key = '_';
+
+
+            while (inp_key != 'S')
+            {
+                Console.WriteLine("Press A,D,G,I or S:");
+                ReadKey(ref inp_key);
+                switch (inp_key)
+                {
+                    case 'A':
+                        {
+                            AddUser(userLogic);
+                            break;
+                        }
+                    case 'D':
+                        {
+                            DeleteUser(userLogic);
+                            break;
+                        }
+                    case 'G':
+                        {
+                            ShowUsers(userLogic);
+                            break;
+                        }
+                    case 'I':
+                        {
+                            ShowUserById(userLogic);
+                            break;
+                        }
+                    case 'S':
+                        {                           
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("You have entered wrong input data. Try again.");
+                        }
+                        break;
+                }
+                Console.WriteLine();
+                DependencyResolver.Save();
+            }
+            
 
         }
 

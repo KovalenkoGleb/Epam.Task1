@@ -21,10 +21,13 @@ namespace Epam.Task7.Entities
                 return (DateTime.Now.Year - DateOfBirth.Year);
             }
         } // проверить правильность
+              
 
         public override string ToString()
         {
             return $"{Id} {Name} {Age}";
         }
+
+        
     }
 }

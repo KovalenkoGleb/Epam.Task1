@@ -12,5 +12,7 @@ namespace Epam.Task7.DAL.Interface
         User GetById(int id);
         
         IEnumerable<User> GetAll();
+
+        void SaveStorage();
     }
 }

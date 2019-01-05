@@ -19,5 +19,10 @@ namespace Epam.Task7.Common
         private static IUserLogic userLogic;
 
         public static IUserLogic UserLogic => userLogic ?? (userLogic = new UserLogic(UserDao));
+
+        public static void Save()
+        {
+            UserDao.SaveStorage();
+        }
     }
 }
