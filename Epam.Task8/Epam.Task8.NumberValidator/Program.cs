@@ -5,12 +5,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-
 namespace Epam.Task8.NumberValidator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.Write("Enter text: ");
             string inp = Console.ReadLine();
@@ -33,4 +32,3 @@ namespace Epam.Task8.NumberValidator
         }
     }
 }
-

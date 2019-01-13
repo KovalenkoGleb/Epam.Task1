@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Epam.Task8.HTMLReplacer
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.Write("Enter text: ");
             string inp = Console.ReadLine();
