@@ -15,7 +15,7 @@ namespace Epam.Task8.NumberValidator
             string inp = Console.ReadLine();
             Regex regex1 = new Regex(@"-?[0-9]+");
             Regex regex2 = new Regex(@"-?[0-9]+\.[0-9]+");
-            Regex regex3 = new Regex(@"-?[0-9]+\.[0-9]+e-[0-9]");
+            Regex regex3 = new Regex(@"-?[0-9]+\.[0-9]+e-?[0-9]");
 
             if (regex1.Match(inp).ToString().Count() == inp.Count() || (regex2.Match(inp).ToString().Count() == inp.Count()))
             {
