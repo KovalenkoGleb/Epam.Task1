@@ -1,0 +1,68 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.container{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    margin-right: 25px;
+    position: relative;
+    padding: 3px;
+    min-height: 30px;
+    width: 70px;
+    border-radius: 5px 5px 0 0;
+    background: white;
+    font-size: 14pt;
+}
+.container ul{
+    position: absolute;
+    width: 150px;
+    display: none;
+    padding: 3px;
+}
+.sub>li a {
+    color: #0000ff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+ }
+.col:hover .sub {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+.col:hover{
+    box-shadow: 0 2px 2px 0 white,
+    2px 0 2px 0 #bababa,
+    -2px 0 2px 0 #bababa,
+    0 -1px 2px 0 #bababa;
+    border-radius: 4px 4px 0 0;
+}
+.col:hover .sub:before {
+    content: "";
+    width: 70px;
+    height: 6px;
+    background: white;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    box-shadow: 2px 0 0 0 #bababa, -2px 0 0 0 #bababa;
+}
+.col:hover .file, .col:hover .edit{
+    color: #000000;
+    text-decoration: none;
+}
+.col:hover .sub {
+    box-shadow: 0 0 4px 2px #bababa;
+    z-index: -1;
+}
+.sub a:hover {
+    background: #37ABFF;
+    color: #ffffff;
+}
