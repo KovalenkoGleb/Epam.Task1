@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.wrapper article {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.optionsField option {
+    font-size: 12pt;
+}
+
+.optionsField select {
+    width: 120px;
+    height: 120px;
+}
+
+.buttons {
+    vertical-align: super;
+}
+
+.buttons button {
+    display: block;
+    width: 40px;
+    height: 30px;
+    font-size: 16px;
+}
