@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task7.Awards.BLL", "Ep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task7.Awards.BLL.Interface", "Epam.Task7.Awards.BLL.Interface\Epam.Task7.Awards.BLL.Interface.csproj", "{DA33F1F1-7AE3-415B-8B28-5450569705BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task11.WebUI", "Epam.Task11.WebUI\Epam.Task11.WebUI.csproj", "{7888E1FD-BC10-47A3-94CC-91436056A4CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{DA33F1F1-7AE3-415B-8B28-5450569705BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA33F1F1-7AE3-415B-8B28-5450569705BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA33F1F1-7AE3-415B-8B28-5450569705BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7888E1FD-BC10-47A3-94CC-91436056A4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7888E1FD-BC10-47A3-94CC-91436056A4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7888E1FD-BC10-47A3-94CC-91436056A4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7888E1FD-BC10-47A3-94CC-91436056A4CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{E79C443F-6CD4-4AB5-A1B2-B3752F2B1961} = {A457A852-8275-4368-92C9-7C540C8D763B}
 		{7B3AAE5C-726A-4B18-B4D4-416DD094A688} = {ADB6A5F2-ED9F-4555-B97E-9FE179DE6BE2}
 		{DA33F1F1-7AE3-415B-8B28-5450569705BE} = {ADB6A5F2-ED9F-4555-B97E-9FE179DE6BE2}
+		{7888E1FD-BC10-47A3-94CC-91436056A4CC} = {2C784F8B-3951-488F-A17F-120851D8B708}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D50F13E-C9C7-4ACE-9960-0296A7D2DAF4}

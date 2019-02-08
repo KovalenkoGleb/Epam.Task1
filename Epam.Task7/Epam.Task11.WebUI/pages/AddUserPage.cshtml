@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+
+}
+
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Epam.Task7.Awards.BLL.Interface;
+@using Epam.Task7.Common;
+@using Epam.Task7.Entities;
+@using Epam.Task7.Users.BLL;
+@using Epam.Task7.Users.BLL.Interface;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <section class="wrapper">
+        <h1>User's name</h1>
+        <input class="userInp" />
+        <h1>BirthDay</h1>
+        <input type="date" name="bdate"><br /> 
+
+        <button class="button" id="SubmitUser">Submit</button>
+
+        @{
+            var userLogic = DependencyResolver.UserLogic;
+            var awardLogic = DependencyResolver.AwardLogic;
+
+        }
+
+
+    </section>
+</body>
+</html>
