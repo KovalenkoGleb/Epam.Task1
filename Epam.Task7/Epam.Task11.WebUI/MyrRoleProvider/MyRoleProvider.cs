@@ -11,8 +11,9 @@ namespace Epam.Task11.WebUI.MyRoleProvider
     {
         public override bool IsUserInRole(string username, string roleName)
         {
-            
-            }
+            throw new NotImplementedException();
+
+        }
 
 
         public override string[] GetRolesForUser(string username)
@@ -61,15 +62,7 @@ namespace Epam.Task11.WebUI.MyRoleProvider
             throw new NotImplementedException();
         }       
 
-        public override string[] GetRolesForUser(string username)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string[] GetUsersInRole(string roleName)
-        {
-            throw new NotImplementedException();
-        }        
+            
 
         public override void RemoveUsersFromRoles(string[] usernames, string[] roleNames)
         {
