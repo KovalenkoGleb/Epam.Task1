@@ -110,6 +110,8 @@
     <Content Include="pages\AddAwardToUser.cshtml" />
     <Content Include="pages\UserPicChange.cshtml" />
     <Content Include="pages\AwardPicChange.cshtml" />
+    <Content Include="pages\Logout.cshtml" />
+    <Content Include="pages\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
