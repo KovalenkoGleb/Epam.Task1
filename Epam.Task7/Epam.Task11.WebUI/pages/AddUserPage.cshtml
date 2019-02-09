@@ -13,30 +13,49 @@
 @using Epam.Task7.Entities;
 @using Epam.Task7.Users.BLL;
 @using Epam.Task7.Users.BLL.Interface;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc.Razor;
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>Adding user</title>
 </head>
 <body>
-    <section class="wrapper">
-        <h1>User's name</h1>
-        <input class="userInp" />
-        <h1>BirthDay</h1>
-        <input type="date" name="bdate"><br /> 
 
-        <button class="button" id="SubmitUser">Submit</button>
 
-        @{
+    <form action="~/pages/AddUserPage" method="post">
+
+        <label>User's name</label>
+        <input type="text" name="userInp" />
+        <label> BirthDay</label>
+        <input type="date" name="bdate"><br />
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    @{ if (IsPost)
+        {
+            string name = Request.Params["userInp"];
+            DateTime bdate = DateTime.Parse(Request.Params["bdate"]);
+            <div> @name @bdate </div>
             var userLogic = DependencyResolver.UserLogic;
             var awardLogic = DependencyResolver.AwardLogic;
 
+            var user = new User();
+
+            user.Name = name;
+
+            user.DateOfBirth = bdate;
+            userLogic.Add(user);
+
         }
+    }
 
 
-    </section>
 </body>
 </html>

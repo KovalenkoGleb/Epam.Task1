@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Epam.Task7.Awards.BLL.Interface;
+@using Epam.Task7.Common;
+@using Epam.Task7.Entities;
+@using Epam.Task7.Users.BLL;
+@using Epam.Task7.Users.BLL.Interface;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc.Razor;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Showing Users</title>
+</head>
+<body>
+    <div>
+        @{
+            var userLogic = DependencyResolver.UserLogic;
+            var awardLogic = DependencyResolver.AwardLogic;
+
+
+            <div>ID NAME AGE</div>
+            foreach (var user in userLogic.GetAll())
+            {
+                <div>@user</div>
+                <div>AWARDS</div>
+                Dictionary<int, List<int>> awardId_UsersIDs = awardLogic.GetDictOfAwardsAndUsers();
+                foreach (var item in awardId_UsersIDs)
+                {
+                    if (item.Value.Contains(user.Id))
+                    {
+                        <div>@awardLogic.GetById(item.Key)</div>
+                    }
+                }
+
+
+            }
+        }
+    </div>
+</body>
+</html>

@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7888E1FD-BC10-47A3-94CC-91436056A4CC}</ProjectGuid>
+    <ProjectGuid>{BFE31DB9-8875-4015-A3DF-4766D925B64A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Epam.Task11.WebUI</RootNamespace>
-    <AssemblyName>Epam.Task11.WebUI</AssemblyName>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -59,9 +59,6 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
@@ -88,69 +85,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\Scripts.js" />
-    <Content Include="Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Index.cshtml" />
-    <Content Include="pages\AddUserPage.cshtml" />
     <None Include="packages.config" />
-    <Content Include="pages\ShowAllUsers.cshtml" />
-    <Content Include="pages\DeleteUser.cshtml" />
-    <Content Include="pages\GetUserById.cshtml" />
-    <Content Include="pages\AddAward.cshtml" />
-    <Content Include="pages\DeleteAward.cshtml" />
-    <Content Include="pages\ShowAwards.cshtml" />
-    <Content Include="pages\GetAwardById.cshtml" />
-    <Content Include="pages\AddAwardToUser.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Epam.Task7.Awards.BLL.Interface\Epam.Task7.Awards.BLL.Interface.csproj">
-      <Project>{da33f1f1-7ae3-415b-8b28-5450569705be}</Project>
-      <Name>Epam.Task7.Awards.BLL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.Awards.BLL\Epam.Task7.Awards.BLL.csproj">
-      <Project>{7b3aae5c-726a-4b18-b4d4-416dd094a688}</Project>
-      <Name>Epam.Task7.Awards.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.Common\Epam.Task7.Common.csproj">
-      <Project>{e79c443f-6cd4-4ab5-a1b2-b3752f2b1961}</Project>
-      <Name>Epam.Task7.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.ConsolePL\Epam.Task7.ConsolePL.csproj">
-      <Project>{23474301-cb9d-4a81-9e23-f2d08e36046c}</Project>
-      <Name>Epam.Task7.ConsolePL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.DAL.Interface\Epam.Task7.DAL.Interface.csproj">
-      <Project>{0a910e72-e8db-419b-9e71-d1293771bfdf}</Project>
-      <Name>Epam.Task7.DAL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.DAL\Epam.Task7.DAL.csproj">
-      <Project>{17efb0a8-371b-4ed3-b517-f71489c1108f}</Project>
-      <Name>Epam.Task7.DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.Entities\Epam.Task7.Entities.csproj">
-      <Project>{a42b5fe7-b25d-474f-9604-d803c1486ec6}</Project>
-      <Name>Epam.Task7.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.Users.BLL.Interface\Epam.Task7.Users.BLL.Interface.csproj">
-      <Project>{e73fe3bb-3fec-455d-9e4a-18940a5d664e}</Project>
-      <Name>Epam.Task7.Users.BLL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.Task7.Users\Epam.Task7.Users.BLL.csproj">
-      <Project>{d72c71c7-8f44-4af6-a2e7-9b1290db6a8f}</Project>
-      <Name>Epam.Task7.Users.BLL</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -165,9 +112,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>10446</DevelopmentServerPort>
+          <DevelopmentServerPort>25420</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10446/</IISUrl>
+          <IISUrl>http://localhost:25420/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
