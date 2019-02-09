@@ -12,6 +12,8 @@ namespace Epam.Task7.Entities
 
         public string Name { get; set; }
 
+        public string url = "https://pp.userapi.com/c850616/v850616590/b3215/YSVuLENOfjg.jpg";
+
         public DateTime DateOfBirth { get; set; }
 
         public int Age

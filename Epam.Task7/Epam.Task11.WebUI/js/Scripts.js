@@ -6,7 +6,9 @@
     delAwardBtn = document.getElementById('delAward'),
     showAwardsBtn = document.getElementById('showAwards'),
     getAwardByIdBtn = document.getElementById('getAwardById'),
-    addAwardToUserBtn = document.getElementById('addAwardToUser');
+    addAwardToUserBtn = document.getElementById('addAwardToUser'),
+    changeUserPicBtn = document.getElementById('changeUserPic'),
+    changeAwardPicBtn = document.getElementById('changeAwardPic');
 
 
 function redirect(url) {
@@ -47,4 +49,17 @@ getAwardByIdBtn.onclick = function () {
 
 addAwardToUserBtn.onclick = function () {
     redirect('/pages/AddAwardToUser.cshtml');
+}
+
+addAwardToUserBtn.onclick = function () {
+    redirect('/pages/AddAwardToUser.cshtml');
+}
+
+
+changeUserPicBtn.onclick = function () {
+    redirect('/pages/UserPicChange.cshtml');
+}
+
+changeAwardPicBtn.onclick = function () {
+    redirect('/pages/AwardPicChange.cshtml');
 }

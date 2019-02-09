@@ -33,16 +33,18 @@
             foreach (var user in userLogic.GetAll())
             {
 
-                <div>@user <br />Awards:</div>
+                <div><img src=@user.url height="25" width="25"/>@user <br />Awards:</div>
 
                 Dictionary<int, List<int>> awardId_UsersIDs = awardLogic.GetDictOfAwardsAndUsers();
                 foreach (var item in awardId_UsersIDs)
                 {
-                    
+
                     if (item.Value.Contains(user.Id))
                     {
-                       
-                        <div>@awardLogic.GetById(item.Key)</div>
+
+                <div>
+                    <img src=@awardLogic.GetById(item.Key).url height="25" width="25" />  @awardLogic.GetById(item.Key)                    
+                </div>
                     }
                 }
                 <br />

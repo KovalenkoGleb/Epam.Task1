@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
 }
+
 @using System;
 @using System.Collections.Generic;
 @using System.Linq;
@@ -13,33 +14,36 @@
 @using Epam.Task7.Users.BLL.Interface;
 @using System.Web.Mvc.Html;
 @using System.Web.Mvc.Razor;
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Get Award By Id</title>
+    <title></title>
 </head>
 <body>
-    <form action="~/pages/GetAwardById" method="post">
+    <form action="~/pages/UserPicChange" method="post">
 
-        <label>Award's id</label>
-        <input type="number" name="aID" />
+        <label>User's id</label>
+        <input type="number" name="uID" />
+        <label> New image url</label>
+        <input type="text" name="imgurl"><br />
 
         <button type="submit">Submit</button>
     </form>
-
     @{ if (IsPost)
         {
-            int aID = int.Parse(Request.Params["aID"]);
+            int uID = int.Parse(Request.Params["uID"]);
+            string url = Request.Params["imgurl"];
+
 
             var userLogic = DependencyResolver.UserLogic;
             var awardLogic = DependencyResolver.AwardLogic;
 
-            <div><img src=@awardLogic.GetById(aID).url height="25" width="25" />  @awardLogic.GetById(aID)</div>
-
+            userLogic.GetById(uID).url = url;
+ 
         }
     }
-
 </body>
 </html>

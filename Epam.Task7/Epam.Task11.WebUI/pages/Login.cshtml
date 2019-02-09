@@ -1,0 +1,18 @@
+﻿@if(IsPost)
+{
+    var user = Request["UserName"];
+    var password = Request["Password"];
+
+    if(user.StartsWith("!") && password.StartsWith("1"))
+    {
+        @FormsAuthentication.SetAuthCookie(user, createPersistentCookie: true);
+    }
+    return;
+}
+
+<form action="~/pages/Login.cshtml" method="post">
+    <input type="text" name="UserName" />
+    <input type="text"name="Password" />
+    <button type="submit">Log in</button>
+           
+</form>

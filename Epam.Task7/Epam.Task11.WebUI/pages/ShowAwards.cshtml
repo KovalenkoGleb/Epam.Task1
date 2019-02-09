@@ -29,7 +29,7 @@
             var awardLogic = DependencyResolver.AwardLogic;
             foreach (var award in awardLogic.GetAll())
             {
-                <div>@award;</div>
+                <div><img src=@award.url height="25" width="25" />     @award;</div>
             }
         }
     </div>

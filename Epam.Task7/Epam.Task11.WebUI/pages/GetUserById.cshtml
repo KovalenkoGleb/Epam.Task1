@@ -35,8 +35,8 @@
 
             var userLogic = DependencyResolver.UserLogic;
             var awardLogic = DependencyResolver.AwardLogic;
-
-            <div>@userLogic.GetById(uID)</div>
+            
+            <div><img src=@userLogic.GetById(uID).url height="25" width="25" /> @userLogic.GetById(uID)</div>
 
         }
     }
