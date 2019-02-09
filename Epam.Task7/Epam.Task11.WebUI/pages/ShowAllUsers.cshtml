@@ -32,16 +32,20 @@
             <div>ID NAME AGE</div>
             foreach (var user in userLogic.GetAll())
             {
-                <div>@user</div>
-                <div>AWARDS</div>
+
+                <div>@user <br />Awards:</div>
+
                 Dictionary<int, List<int>> awardId_UsersIDs = awardLogic.GetDictOfAwardsAndUsers();
                 foreach (var item in awardId_UsersIDs)
                 {
+                    
                     if (item.Value.Contains(user.Id))
                     {
+                       
                         <div>@awardLogic.GetById(item.Key)</div>
                     }
                 }
+                <br />
 
 
             }

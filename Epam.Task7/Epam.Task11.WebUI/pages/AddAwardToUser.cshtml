@@ -1,7 +1,18 @@
 ﻿@{
     Layout = null;
 }
-
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Epam.Task7.Awards.BLL.Interface;
+@using Epam.Task7.Common;
+@using Epam.Task7.Entities;
+@using Epam.Task7.Users.BLL;
+@using Epam.Task7.Users.BLL.Interface;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc.Razor;
 <!DOCTYPE html>
 
 <html>
@@ -10,8 +21,26 @@
     <title>Adding Award to User</title>
 </head>
 <body>
-    <div>
-    
-    </div>
+    <form action="~/pages/AddAwardToUser" method="post">
+
+        <label>User's id</label>
+        <input type="number" name="userId" />
+        <label> Award's id</label>
+        <input type="number" name="awardId"><br />
+
+        <button type="submit">Submit</button>
+    </form>
+    @{ if (IsPost)
+        {
+            int uID = int.Parse(Request.Params["userId"]);
+            int aID = int.Parse(Request.Params["awardId"]);
+
+            var userLogic = DependencyResolver.UserLogic;
+            var awardLogic = DependencyResolver.AwardLogic;            
+
+            awardLogic.AddAwardToUser(aID, uID);
+
+        }
+    }
 </body>
 </html>

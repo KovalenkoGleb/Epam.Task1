@@ -42,7 +42,7 @@
         {
             string name = Request.Params["userInp"];
             DateTime bdate = DateTime.Parse(Request.Params["bdate"]);
-            <div> @name @bdate </div>
+          
             var userLogic = DependencyResolver.UserLogic;
             var awardLogic = DependencyResolver.AwardLogic;
 

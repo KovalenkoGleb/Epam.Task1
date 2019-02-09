@@ -1,7 +1,18 @@
 ﻿@{
     Layout = null;
 }
-
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Epam.Task7.Awards.BLL.Interface;
+@using Epam.Task7.Common;
+@using Epam.Task7.Entities;
+@using Epam.Task7.Users.BLL;
+@using Epam.Task7.Users.BLL.Interface;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc.Razor;
 <!DOCTYPE html>
 
 <html>
@@ -10,8 +21,25 @@
     <title>Get Award By Id</title>
 </head>
 <body>
-    <div>
-    
-    </div>
+    <form action="~/pages/GetAwardById" method="post">
+
+        <label>Award's id</label>
+        <input type="number" name="aID" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{ if (IsPost)
+        {
+            int aID = int.Parse(Request.Params["aID"]);
+
+            var userLogic = DependencyResolver.UserLogic;
+            var awardLogic = DependencyResolver.AwardLogic;
+
+            <div>@awardLogic.GetById(aID)</div>
+
+        }
+    }
+
 </body>
 </html>

@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\DeleteAward.js" />
     <Content Include="js\Scripts.js" />
     <Content Include="Styles.css" />
     <Content Include="Web.config" />

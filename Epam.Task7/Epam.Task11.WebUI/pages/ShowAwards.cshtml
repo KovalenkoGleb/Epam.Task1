@@ -1,7 +1,18 @@
 ﻿@{
     Layout = null;
 }
-
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Epam.Task7.Awards.BLL.Interface;
+@using Epam.Task7.Common;
+@using Epam.Task7.Entities;
+@using Epam.Task7.Users.BLL;
+@using Epam.Task7.Users.BLL.Interface;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc.Razor;
 <!DOCTYPE html>
 
 <html>
@@ -11,7 +22,16 @@
 </head>
 <body>
     <div>
-    
+        ID TITLE
+
+        @{
+            var userLogic = DependencyResolver.UserLogic;
+            var awardLogic = DependencyResolver.AwardLogic;
+            foreach (var award in awardLogic.GetAll())
+            {
+                <div>@award;</div>
+            }
+        }
     </div>
 </body>
 </html>
