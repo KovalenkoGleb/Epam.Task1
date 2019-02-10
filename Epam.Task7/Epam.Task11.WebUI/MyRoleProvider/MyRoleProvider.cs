@@ -15,7 +15,7 @@ namespace Epam.Task11.WebUI.MyRoleProvider
                 return true;
             }
 
-            if(roleName == "User")
+            if (roleName == "User")
             {
                 return true;
             }
@@ -64,7 +64,7 @@ namespace Epam.Task11.WebUI.MyRoleProvider
         public override string[] FindUsersInRole(string roleName, string usernameToMatch)
         {
             throw new NotImplementedException();
-        }                  
+        }
 
         public override void RemoveUsersFromRoles(string[] usernames, string[] roleNames)
         {

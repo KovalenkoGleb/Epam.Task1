@@ -23,9 +23,9 @@ namespace Epam.Task7.Common
 
         private static IAwardLogic awardLogic;
 
-        public static IUserDao UserDao => userDao ?? (userDao = new UserDao());
+        public static IUserDao UserDao => userDao ?? (userDao = new UserSQLDao());
 
-        public static IAwardDao AwardDao => awardDao ?? (awardDao = new AwardDao());
+        public static IAwardDao AwardDao => awardDao ?? (awardDao = new AwardSQLDao());
 
         public static IAwardLogic AwardLogic => awardLogic ?? (awardLogic = new AwardLogic(AwardDao));
 
