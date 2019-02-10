@@ -4,31 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 
-
 namespace Epam.Task11.WebUI.MyRoleProvider
 {
     public class MyRoleProvider : RoleProvider
     {
         public override bool IsUserInRole(string username, string roleName)
         {
-            throw new NotImplementedException();
+            if (username == "Admin")
+            {
+                return true;
+            }
 
+            if(roleName == "User")
+            {
+                return true;
+            }
+
+            return false;
         }
-
 
         public override string[] GetRolesForUser(string username)
         {
             switch (username)
             {
                 case "Admin":
-                    return new[] { "Admins", "User" };
+                    return new[] { "Admin", "User" };
                 default:
                     return new[] { "User" };
             }
-
-
         }
-
 
         public override string[] GetUsersInRole(string roleName)
         {
@@ -60,9 +64,7 @@ namespace Epam.Task11.WebUI.MyRoleProvider
         public override string[] FindUsersInRole(string roleName, string usernameToMatch)
         {
             throw new NotImplementedException();
-        }       
-
-            
+        }                  
 
         public override void RemoveUsersFromRoles(string[] usernames, string[] roleNames)
         {

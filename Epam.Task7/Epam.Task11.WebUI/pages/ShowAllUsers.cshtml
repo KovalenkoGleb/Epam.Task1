@@ -32,19 +32,23 @@
             <div>ID NAME AGE</div>
             foreach (var user in userLogic.GetAll())
             {
-
-                <div><img src=@user.url height="25" width="25"/>@user <br />Awards:</div>
-
-                Dictionary<int, List<int>> awardId_UsersIDs = awardLogic.GetDictOfAwardsAndUsers();
-                foreach (var item in awardId_UsersIDs)
+                
+                    <div><img src=@user.url height="25" width="25" />@user </div>
+                if (User.IsInRole("User"))
                 {
+                    <p>Awards:</p>
 
-                    if (item.Value.Contains(user.Id))
+                    Dictionary<int, List<int>> awardId_UsersIDs = awardLogic.GetDictOfAwardsAndUsers();
+                    foreach (var item in awardId_UsersIDs)
                     {
 
-                <div>
-                    <img src=@awardLogic.GetById(item.Key).url height="25" width="25" />  @awardLogic.GetById(item.Key)                    
-                </div>
+                        if (item.Value.Contains(user.Id))
+                        {
+
+                            <div>
+                                <img src=@awardLogic.GetById(item.Key).url height="25" width="25" />  @awardLogic.GetById(item.Key)
+                            </div>
+                        }
                     }
                 }
                 <br />

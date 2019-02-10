@@ -15,12 +15,12 @@ function redirect(url) {
     location = url;
 }
 
-addUserBtn.onclick = function () {
-    redirect('/pages/AddUserPage.cshtml');
-}
-
 showUsersBtn.onclick = function () {
     redirect('/pages/ShowAllUsers.cshtml');
+}
+
+addUserBtn.onclick = function () {
+    redirect('/pages/AddUserPage.cshtml');
 }
 
 delUserBtn.onclick = function () {
