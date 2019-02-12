@@ -14,6 +14,9 @@
 @using Epam.Task7.Users.BLL.Interface;
 @using System.Web.Mvc.Html;
 @using System.Web.Mvc.Razor;
+@using System.Data;
+@using System.Data.SqlClient;
+@using System.Configuration;
 
 <!DOCTYPE html>
 
@@ -38,11 +41,27 @@
             string url = Request.Params["imgurl"];
 
 
-            var userLogic = DependencyResolver.UserLogic;
-            var awardLogic = DependencyResolver.AwardLogic;
+            using (var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
+            {
+                var command = sqlConnection.CreateCommand();
+                command.CommandText = "UserPicChange";
+                command.CommandType = CommandType.StoredProcedure;
 
-            userLogic.GetById(uID).url = url;
- 
+                var user = new User();
+                user.Id = uID;
+                user.url = url;
+
+                SqlParameter parameterID = new SqlParameter("@Id", user.Id);
+                command.Parameters.Add(parameterID);
+
+                SqlParameter parameterurl = new SqlParameter("@url", user.url);
+                command.Parameters.Add(parameterurl);
+
+
+                sqlConnection.Open();
+                var reader = command.ExecuteNonQuery();
+            }
+
         }
     }
 </body>
